@@ -20,27 +20,21 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 1. Install mkdocs by running the following command in your terminal:
 
-    ```bash
-    pip install mkdocs
-    pip install "mkdocstrings[python]"
-    pip install mkdocs-material
-    ```
+        pip install mkdocs
+        pip install "mkdocstrings[python]"
+        pip install mkdocs-material
 
 2. create a new mkdocs using the exist project, excute the following command in your project root directory:
 
-    ```bash
-    mkdocs new .
-    ```
+        mkdocs new .
 
     After this command, a new mkdocs.yml and docs/index.md will be created.
 
 3. Use the following command to start the live-reloading docs server, and this page will be available at <http://127.0.0.1:8000/>
 
-    ```bash
-    mkdocs serve
-    ```
+        mkdocs serve
 
-## Documnents for build python project documents with mkdocs
+## Reference documnents
 
 * <https://realpython.com/python-project-documentation-with-mkdocs/#step-5-build-your-documentation-with-mkdocs>
 
