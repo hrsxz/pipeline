@@ -10,7 +10,7 @@ from torchvision.transforms import Compose
 from src.utils import logger_config
 
 # Initialize the logger for the module
-logger = logger_config.setup_logger("dataset")
+logger = logger_config.setup_logger(name="dataset", filename="logs/dataset.log")
 
 
 class DataTransformer(ABC):

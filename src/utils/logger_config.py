@@ -1,11 +1,14 @@
 import logging
+import os
 
 # 配置日志格式
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(filename)s - %(message)s"
 
 
 # 配置日志系统
-def setup_logger(name: str = "main_logger", level=logging.INFO) -> logging.Logger:
+def setup_logger(
+    name: str = "main_logger", level=logging.INFO, filename=""
+) -> logging.Logger:
     """
     配置日志记录器
     Args:
@@ -18,16 +21,22 @@ def setup_logger(name: str = "main_logger", level=logging.INFO) -> logging.Logge
     logger = logging.getLogger(name)
     logger.setLevel(level)
 
-    # 配置控制台日志输出
+    # Create log file
+    if filename != "":
+        log_dir = os.path.dirname(filename)
+        if log_dir and not os.path.exists(log_dir):
+            os.makedirs(log_dir, exist_ok=True)
+        # file output
+        file_handler = logging.FileHandler(filename)
+        file_handler.setLevel(level)
+        file_handler.setFormatter(logging.Formatter(LOG_FORMAT))
+        logger.addHandler(file_handler)
+
+    # console output
     console_handler = logging.StreamHandler()
     console_handler.setLevel(level)
-
-    # 配置日志格式
     formatter = logging.Formatter(LOG_FORMAT)
     console_handler.setFormatter(formatter)
-
-    # 避免重复添加处理程序
-    if not logger.hasHandlers():
-        logger.addHandler(console_handler)
+    logger.addHandler(console_handler)
 
     return logger
