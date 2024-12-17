@@ -1,0 +1,80 @@
+# repos:
+#   # isort - Import sorting
+#   - repo: https://github.com/pre-commit/mirrors-isort
+#     rev: v5.12.0  # 使用 isort 的版本
+#     hooks:
+#       - id: isort
+#         args: ["--profile", "black"]
+# 
+#   # black - Code formatter
+#   - repo: https://github.com/psf/black
+#     rev: 23.9b0  # 使用 black 的版本
+#     hooks:
+#       - id: black
+# 
+#   # flake8 - Code linting
+#   - repo: https://github.com/pycqa/flake8
+#     rev: 6.1.0  # 使用 flake8 的版本
+#     hooks:
+#       - id: flake8
+#         args: ["--max-line-length=88", "--ignore=E203,W503"]
+# 
+#   # mypy - Static type checker
+#   - repo: https://github.com/pre-commit/mirrors-mypy
+#     rev: v1.5.1  # 使用 mypy 的版本
+#     hooks:
+#       - id: mypy
+#         args: ["--ignore-missing-imports"]
+#
+#   # nbQA - check for jupyter notebook
+#   - repo: https://github.com/nbQA-dev/nbQA
+#     rev: 1.5.2
+#     hooks:
+#       - id: nbqa-black
+#       - id: nbqa-flake8
+#       - id: nbqa-pylint
+#       - id: nbqa-mypy
+
+repos:
+  - repo: local
+    hooks:
+      # isort - Import sorting
+      - id: isort
+        name: isort (local)
+        entry: .venv/Scripts/isort.exe
+        language: system
+        types: [python]
+        # files: ^.*\.py$  # 只检查 .py 文件
+        files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+
+      # black - Code formatter
+      - id: black
+        name: black (local)
+        entry: .venv/Scripts/black.exe
+        language: system
+        types: [python]
+        files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+
+      # flake8 - Code linting
+      - id: flake8
+        name: flake8 (local)
+        entry: .venv/Scripts/flake8.exe
+        language: system
+        types: [python]
+        files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+
+      # pylint - Code quality checker
+      - id: pylint
+        name: pylint (local)
+        entry: .venv/Scripts/pylint.exe
+        language: system
+        types: [python]
+        files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+
+      # mypy - Static type checker
+      - id: mypy
+        name: mypy (local)
+        entry: .venv/Scripts/mypy.exe
+        language: system
+        types: [python]
+        files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件

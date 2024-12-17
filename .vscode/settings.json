@@ -1,0 +1,20 @@
+{
+    "pylint.enabled": true,
+    "editor.rulers": [
+        88, 100
+    ],
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+
+    // Activate venv when start terminal
+    "python.defaultInterpreterPath": ".venv/Scripts/python.exe",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+        "path": "cmd.exe",
+        "args": ["/k", ".venv\\Scripts\\activate"]
+        }
+    }
+}

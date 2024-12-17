@@ -1,0 +1,35 @@
+data:
+  train:
+    path: data/train/
+    files:
+      - Example1.csv # new - also used in validation!!
+
+  val:
+    path: data/val/
+    files:
+      - val1.csv
+
+  test:
+    path: data/test/
+    files:
+      - test1.csv
+
+
+pre_processing_steps:
+  - step: choose_columns
+    params:
+      columns: ["radius", "volume"]
+  - step: delete_outlier_in_volume
+    params:
+      volume_threshold: 100
+  - step: concat_dataframes
+    params:
+      join_type: "inner"
+  # - step: replace_column_name
+  #   params:
+  #     filenames:
+  #       - data/val/val1.csv
+  #     columns:
+  #       - crash_label_arm1
+  #     new-names:
+  #       - crash_event_arm1
