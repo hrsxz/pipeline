@@ -1,0 +1,14 @@
+pre_processing_steps:
+  - step: resize
+    params:
+      width: 100
+      height: 100
+
+  - step: normalize
+    params:
+      mean: 127.5
+      std: 127.5
+
+  - step: convert_color
+    params:
+      code: 6  # cv2.COLOR_BGR2GRAY

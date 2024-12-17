@@ -1,19 +1,35 @@
-### **VS Code Linters Configuration with Pre-commit Hooks**
+# **VS Code Linters Configuration**
 
 This document explains how to set up and use **isort**, **black**, **flake8**, **pylint**, and **mypy** in a Python project with **pre-commit** hooks for consistent code quality.
 
 ---
 
 ## **1. Install Linters**
+
 Use the following command to install the required linters and tools:
 
 ```bash
 pip install isort black flake8 pylint mypy pre-commit
 ```
 
----
+## **2. Verify Linter Execution**
 
-## **2. Configure `pyproject.toml` for Linters**
+When you commit changes to your repository, pre-commit will automatically:
+
+- Sort imports with `isort`.
+- Format code with `black`.
+- Lint code with `flake8` and `pylint`.
+- Check types with `mypy`.
+
+## **3. Install Types for Mypy**
+
+Install missing types required for `mypy` to work correctly:
+
+```bash
+mypy --install-types
+```
+
+## **4. Configure `pyproject.toml` for Linters**
 
 Add the following configuration to your `pyproject.toml` file:
 
@@ -58,20 +74,10 @@ ignored-classes = ["DataFrame"]
 jobs = 4  # Parallel linting
 ```
 
----
-
-## **3. Install Types for Mypy**
-Install missing types required for `mypy` to work correctly:
-
-```bash
-mypy --install-types
-```
-
----
-
 ## **4. Pre-commit Hook Setup**
 
 ### **Step 1: Install Pre-commit**
+
 Install pre-commit as a development dependency:
 
 ```bash
@@ -132,6 +138,7 @@ repos:
 ---
 
 ### **Step 3: Install Pre-commit**
+
 Run the following command to install pre-commit hooks:
 
 ```bash
@@ -141,6 +148,7 @@ pre-commit install
 ---
 
 ### **Step 4: Refresh Pre-commit Hooks**
+
 Ensure that all pre-commit hooks are up-to-date:
 
 ```bash
@@ -150,19 +158,9 @@ pre-commit install --install-hooks
 ---
 
 ## **5. Run Pre-commit Manually**
+
 To run the pre-commit hooks manually on all files, use:
 
 ```bash
 pre-commit run --all-files
 ```
-
----
-
-## **6. Verify Linter Execution**
-When you commit changes to your repository, pre-commit will automatically:
-- Sort imports with `isort`.
-- Format code with `black`.
-- Lint code with `flake8` and `pylint`.
-- Check types with `mypy`.
-
----

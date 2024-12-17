@@ -1,5 +1,8 @@
 from abc import ABC, abstractmethod
+from typing import List
 
+import cv2
+import numpy as np
 import pandas as pd
 import yaml  # type: ignore
 from torchvision.transforms import Compose
@@ -176,4 +179,77 @@ class DataPipeline:
 
         result = self.composed_transforms(data)
         logger.info("Data transformation pipeline applied successfully.")
+        return result
+
+
+class ResizeTransform(DataTransformer):
+    def __init__(self, width: int, height: int) -> None:
+        self.width = width
+        self.height = height
+
+    def __call__(self, image: np.ndarray) -> np.ndarray:
+        result = cv2.resize(image, (self.width, self.height))
+        logger.info(f"Resized image to {self.width}x{self.height}.")
+        return result
+
+
+class NormalizeTransform(DataTransformer):
+    def __init__(self, mean: float, std: float) -> None:
+        self.mean = mean
+        self.std = std
+
+    def __call__(self, image: np.ndarray) -> np.ndarray:
+        result = ((image - self.mean) / self.std).astype(np.float32)
+        logger.info("Normalized image.")
+        return result
+
+
+class ConvertColorTransform(DataTransformer):
+    def __init__(self, code: int) -> None:
+        self.code = code
+
+    def __call__(self, image: np.ndarray) -> np.ndarray:
+        result = cv2.cvtColor(image, self.code)
+        logger.info(f"Converted image color using code {self.code}.")
+        return result
+
+
+class ImagePipeline:
+    def __init__(self, config_path: str):
+        self.config_path = config_path
+        self.transformations: List[DataTransformer] = []
+        self.composed_transforms = None
+        self._load_config()
+        self._build_pipeline()
+
+    def _load_config(self) -> None:
+        with open(self.config_path, "r", encoding="utf-8") as file:
+            self.pre_processing_config = yaml.safe_load(file)
+
+    def _build_pipeline(self) -> None:
+        logger.info("Building image processing pipeline.")
+        for step in self.pre_processing_config["pre_processing_steps"]:
+            step_name = step["step"]
+            params = step["params"]
+
+            if step_name == "resize":
+                self.transformations.append(ResizeTransform(**params))
+            elif step_name == "normalize":
+                self.transformations.append(NormalizeTransform(**params))
+            elif step_name == "convert_color":
+                self.transformations.append(ConvertColorTransform(**params))
+            logger.info(f"Added step '{step_name}' to the pipeline.")
+
+        self.composed_transforms = Compose(self.transformations)
+        logger.info("Image processing pipeline built successfully.")
+
+    def apply(self, image: np.ndarray) -> np.ndarray:
+        logger.info("Applying the image processing pipeline.")
+        if self.composed_transforms is None:
+            raise RuntimeError(
+                "The transformation pipeline has not been built successfully."
+            )
+
+        result = self.composed_transforms(image)
+        logger.info("Image processing pipeline applied successfully.")
         return result
