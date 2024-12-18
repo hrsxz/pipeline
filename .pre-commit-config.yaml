@@ -46,6 +46,7 @@ repos:
         types: [python]
         # files: ^.*\.py$  # 只检查 .py 文件
         files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+        exclude: ^src/yolov5/.*  # 忽略 src/yolov5 文件夹下的所有文件
 
       # black - Code formatter
       - id: black
@@ -54,6 +55,7 @@ repos:
         language: system
         types: [python]
         files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+        exclude: ^src/yolov5/.*  # 忽略 src/yolov5 文件夹下的所有文件
 
       # flake8 - Code linting
       - id: flake8
@@ -62,6 +64,7 @@ repos:
         language: system
         types: [python]
         files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+        exclude: ^src/yolov5/.*  # 忽略 src/yolov5 文件夹下的所有文件
 
       # pylint - Code quality checker
       - id: pylint
@@ -70,6 +73,7 @@ repos:
         language: system
         types: [python]
         files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+        exclude: ^src/yolov5/.*  # 忽略 src/yolov5 文件夹下的所有文件
 
       # mypy - Static type checker
       - id: mypy
@@ -78,3 +82,4 @@ repos:
         language: system
         types: [python]
         files: ^src/.*\.py$  # 只检查 src 文件夹下的 .py 文件
+        exclude: ^src/yolov5/.*  # 忽略 src/yolov5 文件夹下的所有文件
