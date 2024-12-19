@@ -28,8 +28,8 @@ pre_processing_steps:
   # - step: replace_column_name
   #   params:
   #     filenames:
-  #       - data/val/val1.csv
+  #       - data/val/file1.csv
   #     columns:
-  #       - crash_label_arm1
+  #       - label_1
   #     new-names:
-  #       - crash_event_arm1
+  #       - event_1

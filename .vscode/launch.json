@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "yolov5 mask detection inference",
+            "type": "debugpy",  // "python"
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/yolov5",
+            "args": [
+                "--source", "${workspaceFolder}/yolov5/data/mask_dataset/images",
+                "--weights", "${workspaceFolder}/yolov5/models/yolov5_mask_detection_l.pt",
+                "--output", "${workspaceFolder}/yolov5/data/mask_dataset/output",
+                "--conf", "0.5",
+                "--class", "0", "1"
+            ]
+        },
+    ]
+}

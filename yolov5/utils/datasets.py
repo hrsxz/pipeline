@@ -14,7 +14,7 @@ from PIL import Image, ExifTags
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-from utils.general import xyxy2xywh, xywh2xyxy, torch_distributed_zero_first
+from yolov5.utils.general import xyxy2xywh, xywh2xyxy, torch_distributed_zero_first
 
 help_url = "https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data"
 img_formats = [".bmp", ".jpg", ".jpeg", ".png", ".tif", ".tiff", ".dng"]
@@ -61,7 +61,8 @@ def create_dataloader(
     world_size=1,
     workers=8,
 ):
-    # Make sure only the first process in DDP process the dataset first, and the following others can use the cache.
+    # Make sure only the first process in DDP process the dataset first, and the
+    # following others can use the cache.
     with torch_distributed_zero_first(rank):
         dataset = LoadImagesAndLabels(
             path,

@@ -4,7 +4,7 @@ import math
 import torch
 import torch.nn as nn
 
-from utils.general import non_max_suppression
+from yolov5.utils.general import non_max_suppression
 
 
 def autopad(k, p=None):  # kernel, padding
