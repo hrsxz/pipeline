@@ -31,3 +31,14 @@
 2024-12-17 14:18:17,050 - INFO - dataset.py - Concatenating DataFrames with join type 'inner'.
 2024-12-17 14:18:17,051 - INFO - dataset.py - Concatenated 2 DataFrames into one DataFrame withshape (5, 2).
 2024-12-17 14:18:17,051 - INFO - dataset.py - Data transformation pipeline applied successfully.
+2024-12-19 01:39:10,395 - INFO - dataset.py - Building data transformation pipeline.
+2024-12-19 01:39:10,396 - INFO - dataset.py - Added step 'choose_columns' to the pipeline.
+2024-12-19 01:39:10,397 - INFO - dataset.py - Added step 'delete_outlier_in_volume' to the pipeline.
+2024-12-19 01:39:10,397 - INFO - dataset.py - Added step 'concat_dataframes' to the pipeline.
+2024-12-19 01:39:10,399 - INFO - dataset.py - Data transformation pipeline built successfully.
+2024-12-19 01:39:10,399 - INFO - dataset.py - Applying the data transformation pipeline.
+2024-12-19 01:39:10,403 - INFO - dataset.py - Selected columns from 2 DataFrames.
+2024-12-19 01:39:10,406 - INFO - dataset.py - Filtered 2 DataFrames.
+2024-12-19 01:39:10,407 - INFO - dataset.py - Concatenating DataFrames with join type 'inner'.
+2024-12-19 01:39:10,410 - INFO - dataset.py - Concatenated 2 DataFrames into one DataFrame withshape (5, 2).
+2024-12-19 01:39:10,411 - INFO - dataset.py - Data transformation pipeline applied successfully.

@@ -75,6 +75,7 @@ This project serves as a demonstration of the knowledge and experience I have ac
 ## 📂 Project Organization
   
     ├── 📂 .venv                        <- Virtual environment for project dependencies
+    │
     ├── 📂 .vscode                      <- Shared VSCode settings
     │   ├── launch.json                 <- Configuration for debugging settings
     │   ├── settings.json               <- Auto-activate the virtual environment and define project
@@ -86,14 +87,11 @@ This project serves as a demonstration of the knowledge and experience I have ac
     │   ├── 📂 reports                  <- Reports and analysis results
     │   ├── 📃 index.md                 <- MkDocs start page
     │   ├── 📃 linters.md               <- Information about linting tools
-    │   ├── 📃 mkdocs_index.md          <- MkDocs index configuration
-    │   ├── 📃 scripts.md               <- Documentation for project scripts
     │
     ├── 📂 inference                    <- Inference output and related files
     │   ├── 📂 output                   <- Model output results
     │
     ├── 📂 logs                         <- Log files for debugging and monitoring
-    │   └── dataset.log                 <- Log file for dataset processing
     │
     ├── 📂 models                       <- Folder to save machine learning models
     │
@@ -162,5 +160,6 @@ Use the following command to start the live-reloading docs server, and this page
 
 ### 📜 Others
 
-CI/CD Pipeline Integration? 
+CI/CD Pipeline Integration?
 
+Dev Container?
