@@ -9,9 +9,9 @@ import torch
 from numpy import random
 from torch.backends import cudnn
 
-from src.models.experimental import attempt_load
-from src.utils.datasets import LoadImages, LoadStreams
-from src.utils.general import (
+from yolov5.models.experimental import attempt_load
+from yolov5.utils.datasets import LoadImages, LoadStreams
+from yolov5.utils.general import (
     apply_classifier,
     check_img_size,
     non_max_suppression,
@@ -21,11 +21,11 @@ from src.utils.general import (
     strip_optimizer,
     xyxy2xywh,
 )
-from src.utils.torch_utils import load_classifier, select_device, time_synchronized
+from yolov5.utils.torch_utils import load_classifier, select_device, time_synchronized
 
 
 # Load Ground Truth
-def load_ground_truth(label_path, _) -> List:
+def load_ground_truth(label_path, img_shape):
     print(f"Loading label file: {label_path}")  # Add this line to debug
     ground_truth_boxes = []
     if os.path.exists(label_path):

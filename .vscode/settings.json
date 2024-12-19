@@ -4,9 +4,9 @@
         88, 100
     ],
     "terminal.integrated.env.windows": {
-        "PYTHONPATH": "${workspaceFolder}"
+        "PYTHONPATH": "${workspaceFolder};${workspaceFolder}/yolov5"
     },
-    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "jupyter.notebookFileRoot": "${workspaceFolder};${workspaceFolder}/yolov5",
 
     // Activate venv when start terminal
     "python.defaultInterpreterPath": ".venv/Scripts/python.exe",
