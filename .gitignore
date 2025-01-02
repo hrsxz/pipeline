@@ -3,3 +3,4 @@
 __pycache__/
 **/__pycache__/
 .env
+/yolov5/models/yolov5_mask_detection_l.pt
