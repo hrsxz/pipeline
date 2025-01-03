@@ -9,6 +9,17 @@ from torchvision.transforms import Compose
 
 from src.utils import logger_config
 
+"""Example
+from torchvision import datasets, transforms
+
+# MNIST dataset preparation
+transform = transforms.Compose([
+    transforms.Resize((14, 14)),  # Resize images to 14x14
+    transforms.ToTensor(),
+    transforms.Normalize((0.5,), (0.5,))  # Normalize to [-1, 1]
+])
+"""
+
 # Initialize the logger for the module
 logger = logger_config.setup_logger(name="dataset", filename="logs/dataset.log")
 

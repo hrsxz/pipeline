@@ -9,7 +9,7 @@ This document explains how to set up and use **isort**, **black**, **flake8**, *
 Use the following command to install the required linters and tools:
 
 ```bash
-pip install isort black flake8 pylint mypy pre-commit
+pip install isort black pyproject-flake8 pylint mypy pre-commit
 ```
 
 ## **2. Verify Linter Execution**
@@ -20,6 +20,14 @@ When you commit changes to your repository, pre-commit will automatically:
 - Format code with `black`.
 - Lint code with `flake8` and `pylint`.
 - Check types with `mypy`.
+
+  | **Tool**   | **Primary Purpose**                     | **Key Features**                      |
+  |------------|-----------------------------------------|----------------------------------------|
+  | `isort`    | Automatically sort `import` statements  | Organizes imports into logical groups |
+  | `black`    | Formats Python code to a unified style  | Strict, automated PEP 8 compliance    |
+  | `flake8`   | Lightweight static code analysis        | Finds syntax/style issues quickly      |
+  | `pylint`   | Advanced static code analysis           | Detects logical errors, provides scores|
+  | `mypy`     | Checks type annotations                 | Ensures type safety and correctness    |
 
 ## **3. Install Types for Mypy**
 
