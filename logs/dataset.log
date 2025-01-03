@@ -42,3 +42,84 @@
 2024-12-19 01:39:10,407 - INFO - dataset.py - Concatenating DataFrames with join type 'inner'.
 2024-12-19 01:39:10,410 - INFO - dataset.py - Concatenated 2 DataFrames into one DataFrame withshape (5, 2).
 2024-12-19 01:39:10,411 - INFO - dataset.py - Data transformation pipeline applied successfully.
+2025-01-03 10:02:41,694 - INFO - dataset.py - Loaded the YAML configuration file <_io.TextIOWrapper name='settings/pipeline.yaml' mode='r' encoding='utf-8'>.
+2025-01-03 10:02:41,695 - INFO - dataset.py - Building data transformation pipeline.
+2025-01-03 10:02:41,696 - INFO - dataset.py - Added step 'choose_columns' to the pipeline.
+2025-01-03 10:02:41,697 - INFO - dataset.py - Added step 'delete_outlier_in_volume' to the pipeline.
+2025-01-03 10:02:41,697 - INFO - dataset.py - Added step 'concat_dataframes' to the pipeline.
+2025-01-03 10:02:41,698 - INFO - dataset.py - Data transformation pipeline built successfully.
+2025-01-03 10:02:41,698 - INFO - dataset.py - Applying the data transformation pipeline.
+2025-01-03 10:02:41,701 - INFO - dataset.py - Selected columns from 2 DataFrames.
+2025-01-03 10:02:41,703 - INFO - dataset.py - Filtered 2 DataFrames.
+2025-01-03 10:02:41,704 - INFO - dataset.py - Concatenating DataFrames with join type 'inner'.
+2025-01-03 10:02:41,705 - INFO - dataset.py - Concatenated 2 DataFrames into one DataFrame withshape (5, 2).
+2025-01-03 10:02:41,706 - INFO - dataset.py - Data transformation pipeline applied successfully.
+2025-01-03 10:02:42,859 - INFO - dataset.py - Building image processing pipeline.
+2025-01-03 10:02:42,860 - INFO - dataset.py - Added step 'resize' to the pipeline.
+2025-01-03 10:02:42,861 - INFO - dataset.py - Added step 'normalize' to the pipeline.
+2025-01-03 10:02:42,862 - INFO - dataset.py - Added step 'convert_color' to the pipeline.
+2025-01-03 10:02:42,863 - INFO - dataset.py - Image processing pipeline built successfully.
+2025-01-03 10:02:42,864 - INFO - dataset.py - Applying the image processing pipeline.
+2025-01-03 10:02:42,864 - INFO - dataset.py - Resized image to 100x100.
+2025-01-03 10:02:42,866 - INFO - dataset.py - Normalized image.
+2025-01-03 10:02:42,868 - INFO - dataset.py - Converted image color using code 6.
+2025-01-03 10:02:42,869 - INFO - dataset.py - Image processing pipeline applied successfully.
+2025-01-03 10:02:42,869 - INFO - dataset.py - Applying the image processing pipeline.
+2025-01-03 10:02:42,870 - INFO - dataset.py - Resized image to 100x100.
+2025-01-03 10:02:42,871 - INFO - dataset.py - Normalized image.
+2025-01-03 10:02:42,871 - INFO - dataset.py - Converted image color using code 6.
+2025-01-03 10:02:42,872 - INFO - dataset.py - Image processing pipeline applied successfully.
+2025-01-03 10:10:36,048 - INFO - dataset.py - Loaded the YAML configuration file <_io.TextIOWrapper name='settings/pipeline.yaml' mode='r' encoding='utf-8'>.
+2025-01-03 10:10:36,049 - INFO - dataset.py - Building data transformation pipeline.
+2025-01-03 10:10:36,050 - INFO - dataset.py - Added step 'choose_columns' to the pipeline.
+2025-01-03 10:10:36,050 - INFO - dataset.py - Added step 'delete_outlier_in_volume' to the pipeline.
+2025-01-03 10:10:36,051 - INFO - dataset.py - Added step 'concat_dataframes' to the pipeline.
+2025-01-03 10:10:36,051 - INFO - dataset.py - Data transformation pipeline built successfully.
+2025-01-03 10:10:36,052 - INFO - dataset.py - Applying the data transformation pipeline.
+2025-01-03 10:10:36,054 - INFO - dataset.py - Selected columns from 2 DataFrames.
+2025-01-03 10:10:36,055 - INFO - dataset.py - Filtered 2 DataFrames.
+2025-01-03 10:10:36,055 - INFO - dataset.py - Concatenating DataFrames with join type 'inner'.
+2025-01-03 10:10:36,056 - INFO - dataset.py - Concatenated 2 DataFrames into one DataFrame withshape (5, 2).
+2025-01-03 10:10:36,057 - INFO - dataset.py - Data transformation pipeline applied successfully.
+2025-01-03 10:10:36,803 - INFO - dataset.py - Building image processing pipeline.
+2025-01-03 10:10:36,804 - INFO - dataset.py - Added step 'resize' to the pipeline.
+2025-01-03 10:10:36,805 - INFO - dataset.py - Added step 'normalize' to the pipeline.
+2025-01-03 10:10:36,806 - INFO - dataset.py - Added step 'convert_color' to the pipeline.
+2025-01-03 10:10:36,806 - INFO - dataset.py - Image processing pipeline built successfully.
+2025-01-03 10:10:36,807 - INFO - dataset.py - Applying the image processing pipeline.
+2025-01-03 10:10:36,807 - INFO - dataset.py - Resized image to 100x100.
+2025-01-03 10:10:36,808 - INFO - dataset.py - Normalized image.
+2025-01-03 10:10:36,809 - INFO - dataset.py - Converted image color using code 6.
+2025-01-03 10:10:36,809 - INFO - dataset.py - Image processing pipeline applied successfully.
+2025-01-03 10:10:36,809 - INFO - dataset.py - Applying the image processing pipeline.
+2025-01-03 10:10:36,810 - INFO - dataset.py - Resized image to 100x100.
+2025-01-03 10:10:36,811 - INFO - dataset.py - Normalized image.
+2025-01-03 10:10:36,811 - INFO - dataset.py - Converted image color using code 6.
+2025-01-03 10:10:36,812 - INFO - dataset.py - Image processing pipeline applied successfully.
+2025-01-03 10:10:57,136 - INFO - dataset.py - Loaded the YAML configuration file <_io.TextIOWrapper name='settings/pipeline.yaml' mode='r' encoding='utf-8'>.
+2025-01-03 10:10:57,137 - INFO - dataset.py - Building data transformation pipeline.
+2025-01-03 10:10:57,137 - INFO - dataset.py - Added step 'choose_columns' to the pipeline.
+2025-01-03 10:10:57,138 - INFO - dataset.py - Added step 'delete_outlier_in_volume' to the pipeline.
+2025-01-03 10:10:57,139 - INFO - dataset.py - Added step 'concat_dataframes' to the pipeline.
+2025-01-03 10:10:57,139 - INFO - dataset.py - Data transformation pipeline built successfully.
+2025-01-03 10:10:57,139 - INFO - dataset.py - Applying the data transformation pipeline.
+2025-01-03 10:10:57,141 - INFO - dataset.py - Selected columns from 2 DataFrames.
+2025-01-03 10:10:57,141 - INFO - dataset.py - Filtered 2 DataFrames.
+2025-01-03 10:10:57,142 - INFO - dataset.py - Concatenating DataFrames with join type 'inner'.
+2025-01-03 10:10:57,143 - INFO - dataset.py - Concatenated 2 DataFrames into one DataFrame withshape (5, 2).
+2025-01-03 10:10:57,143 - INFO - dataset.py - Data transformation pipeline applied successfully.
+2025-01-03 10:10:57,910 - INFO - dataset.py - Building image processing pipeline.
+2025-01-03 10:10:57,911 - INFO - dataset.py - Added step 'resize' to the pipeline.
+2025-01-03 10:10:57,912 - INFO - dataset.py - Added step 'normalize' to the pipeline.
+2025-01-03 10:10:57,913 - INFO - dataset.py - Added step 'convert_color' to the pipeline.
+2025-01-03 10:10:57,913 - INFO - dataset.py - Image processing pipeline built successfully.
+2025-01-03 10:10:57,914 - INFO - dataset.py - Applying the image processing pipeline.
+2025-01-03 10:10:57,915 - INFO - dataset.py - Resized image to 100x100.
+2025-01-03 10:10:57,916 - INFO - dataset.py - Normalized image.
+2025-01-03 10:10:57,916 - INFO - dataset.py - Converted image color using code 6.
+2025-01-03 10:10:57,917 - INFO - dataset.py - Image processing pipeline applied successfully.
+2025-01-03 10:10:57,917 - INFO - dataset.py - Applying the image processing pipeline.
+2025-01-03 10:10:57,918 - INFO - dataset.py - Resized image to 100x100.
+2025-01-03 10:10:57,919 - INFO - dataset.py - Normalized image.
+2025-01-03 10:10:57,919 - INFO - dataset.py - Converted image color using code 6.
+2025-01-03 10:10:57,920 - INFO - dataset.py - Image processing pipeline applied successfully.
