@@ -10,11 +10,11 @@ from threading import Thread
 import cv2
 import numpy as np
 import torch
-from PIL import Image, ExifTags
+from PIL import ExifTags, Image
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-from yolov5.utils.general import xyxy2xywh, xywh2xyxy, torch_distributed_zero_first
+from yolov5.utils.general import torch_distributed_zero_first, xywh2xyxy, xyxy2xywh
 
 help_url = "https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data"
 img_formats = [".bmp", ".jpg", ".jpeg", ".png", ".tif", ".tiff", ".dng"]

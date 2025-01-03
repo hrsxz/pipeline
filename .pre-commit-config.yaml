@@ -46,8 +46,7 @@ repos:
         types: [python]
         # files: ^.*\.py$  # Check all .py files
         files: ^src/.*\.py$  # Only check .py files in the src folder
-        exclude: ^(yolov5/|yolov5(/.*)?).*  # Ignore all files in the src/yolov5 folder
-        args: ["--diff", "--check-only"]
+        exclude: ^(yolov5/|yolov5(/.*)?).*  # Ignore all files in the yolov5 folder
 
       # black - Code formatter
       - id: black

@@ -10,7 +10,7 @@ def setup_logger(
     name: str = "main_logger", level=logging.INFO, filename=""
 ) -> logging.Logger:
     """
-    配置日志记录器
+    Config the logger with the given name and level.
     Args:
         name (str): 日志记录器的名称
         level (int): 日志记录级别
