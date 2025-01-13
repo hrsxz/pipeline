@@ -45,6 +45,7 @@ def markdown_to_html(
         # Convert the html text to pdf
         # HTML(string=html_text).write_pdf(target_file_path)
         pass
+    retrun
 
 
 def find_all_markdown_files(folder_path: str) -> list[str]:

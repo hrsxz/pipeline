@@ -135,3 +135,30 @@
 2025-01-09 20:58:12,014 - INFO - dataset.py - Concatenating DataFrames with join type 'inner'.
 2025-01-09 20:58:12,015 - INFO - dataset.py - Concatenated 2 DataFrames into one DataFrame withshape (5, 2).
 2025-01-09 20:58:12,015 - INFO - dataset.py - Data transformation pipeline applied successfully.
+2025-01-10 10:03:35,982 - INFO - dataset.py - Loaded the YAML configuration file <_io.TextIOWrapper name='settings/pipeline.yaml' mode='r' encoding='utf-8'>.
+2025-01-10 10:03:35,982 - INFO - dataset.py - Building data transformation pipeline.
+2025-01-10 10:03:35,983 - INFO - dataset.py - Added step 'choose_columns' to the pipeline.
+2025-01-10 10:03:35,984 - INFO - dataset.py - Added step 'delete_outlier_in_volume' to the pipeline.
+2025-01-10 10:03:35,984 - INFO - dataset.py - Added step 'concat_dataframes' to the pipeline.
+2025-01-10 10:03:35,985 - INFO - dataset.py - Data transformation pipeline built successfully.
+2025-01-10 10:03:35,986 - INFO - dataset.py - Applying the data transformation pipeline.
+2025-01-10 10:03:35,988 - INFO - dataset.py - Selected columns from 2 DataFrames.
+2025-01-10 10:03:35,989 - INFO - dataset.py - Filtered 2 DataFrames.
+2025-01-10 10:03:35,989 - INFO - dataset.py - Concatenating DataFrames with join type 'inner'.
+2025-01-10 10:03:35,992 - INFO - dataset.py - Concatenated 2 DataFrames into one DataFrame withshape (5, 2).
+2025-01-10 10:03:35,993 - INFO - dataset.py - Data transformation pipeline applied successfully.
+2025-01-10 10:03:41,889 - INFO - dataset.py - Building image processing pipeline.
+2025-01-10 10:03:41,890 - INFO - dataset.py - Added step 'resize' to the pipeline.
+2025-01-10 10:03:41,891 - INFO - dataset.py - Added step 'normalize' to the pipeline.
+2025-01-10 10:03:41,892 - INFO - dataset.py - Added step 'convert_color' to the pipeline.
+2025-01-10 10:03:41,893 - INFO - dataset.py - Image processing pipeline built successfully.
+2025-01-10 10:03:41,894 - INFO - dataset.py - Applying the image processing pipeline.
+2025-01-10 10:03:41,894 - INFO - dataset.py - Resized image to 100x100.
+2025-01-10 10:03:41,896 - INFO - dataset.py - Normalized image.
+2025-01-10 10:03:41,897 - INFO - dataset.py - Converted image color using code 6.
+2025-01-10 10:03:41,898 - INFO - dataset.py - Image processing pipeline applied successfully.
+2025-01-10 10:03:41,899 - INFO - dataset.py - Applying the image processing pipeline.
+2025-01-10 10:03:41,900 - INFO - dataset.py - Resized image to 100x100.
+2025-01-10 10:03:41,901 - INFO - dataset.py - Normalized image.
+2025-01-10 10:03:41,902 - INFO - dataset.py - Converted image color using code 6.
+2025-01-10 10:03:41,902 - INFO - dataset.py - Image processing pipeline applied successfully.
