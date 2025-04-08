@@ -6,7 +6,7 @@
 [![Yolov5](https://img.shields.io/badge/Yolo-v5-blue.svg)](https://github.com/ultralytics/yolov5)
 
 <img align="right"
-src="https://www.foerstergroup.de/typo3conf/ext/wr/Resources/Public/img/foe_logo.svg"
+src=""
 alt="Foester Logo" width=200 height=100>
 
 This project serves as a demonstration of the knowledge and experience I have acquired. The goal is to build a comprehensive, deployable AI framework that integrates data processing, model training, deployment readiness, and documentation.

@@ -16,7 +16,7 @@ data:
 
 
 pre_processing_steps:
-- step: choose_columns
+  - step: choose_columns
     params:
       columns: ["radius", "volume"]
   - step: delete_outlier_in_volume

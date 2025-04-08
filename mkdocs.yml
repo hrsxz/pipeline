@@ -24,3 +24,4 @@ nav:
   - index.md
   - mkdocs_index.md
   - scripts.md
+  - 01_plot_data.html
